@@ -1,1 +1,19 @@
 <h1>投稿フォーム</h1>
+<%= form_with model: @sacred,url: sacred_placese_index_path,method: :post,local :true do |f| %>
+<div>
+    <div>
+        <lable>聖地画像</lable>
+        <%= f.attachment_field :image %>
+    </div>
+    <div>
+        <lable>タイトル</lable>
+        <%= f.title_field :title %>
+    </div>
+    <div>
+        <lable>詳細</lable>
+        <%= f.contents_field :contents %>
+    </div>
+    <div>
+        <%= f.submit "投稿" %>
+    </div>
+</div>
